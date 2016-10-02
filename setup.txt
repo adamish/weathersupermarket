@@ -1,0 +1,5 @@
+sudo su postgres
+ALTER USER wsm CREATEDB;
+\q
+
+createdb wsmdb -U wsm -W -h localhost

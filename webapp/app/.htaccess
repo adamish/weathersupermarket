@@ -1,0 +1,12 @@
+
+<IfModule mod_headers.c>
+Header append Vary: Accept-Encoding
+</IfModule>
+
+<FilesMatch "search.php">
+Header set Cache-Control "max-age=86400"
+</FilesMatch>
+
+<FilesMatch "forecasts.php">
+Header set Cache-Control "max-age=600"
+</FilesMatch>
