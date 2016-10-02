@@ -1,0 +1,39 @@
+Options -Indexes
+
+<FilesMatch "\.(gif|png|jpg)$">
+Header set Cache-Control "max-age=604800"
+SetOutputFilter DEFLATE
+Header append Vary: Accept-Encoding
+</FilesMatch>
+
+<FilesMatch "\.(js|css)$">
+Header set Cache-Control "max-age=604800"
+SetOutputFilter DEFLATE
+Header append Vary: Accept-Encoding
+</FilesMatch>
+
+<FilesMatch "\.html$">
+Header set Cache-Control "no-cache"
+SetOutputFilter DEFLATE
+Header append Vary: Accept-Encoding
+</FilesMatch>
+
+
+<ifModule mod_rewrite.c>
+    RewriteEngine On
+    # reverse proxy
+	RewriteRule ^app/(search/.*)$ app/search.php?data=$1 [L]
+	RewriteRule ^app/(forecasts/.*)$ app/forecasts.php?data=$1 [L]
+	
+	# HTML5 history
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !index
+	RewriteRule ^forecasts/.*$ index.html [L]
+
+	# legacy redirects    
+    RewriteRule ^locate$ / [R]
+    RewriteRule ^forecasts/[a-z0-9]+$ / [R]
+    RewriteRule ^no-results$ / [R]
+
+</ifModule>

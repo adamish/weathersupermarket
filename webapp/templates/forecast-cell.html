@@ -1,0 +1,33 @@
+<td>
+<div>
+<div class="forecast">
+<% var max = -999, min = 999, stars = 0; %>
+<% forecasts.forEach(function(forecast) { %>
+<% if (forecast.daytime === '00:00' || forecast.daytime === '03:00') {
+  return;
+}
+var wind = '';
+if (forecast.windDir && forecast.windSpeed) {
+  wind = ', ' + Math.round(forecast.windSpeed * 0.621371) + 'mph / ' + forecast.windDir;
+}
+%>
+<div class="symbol symbol-<%=forecast.symbol%>"></div>
+<span class="description"><%=(forecasts.length > 1) ? forecast.daytime + ":" : ""%><%-forecast.summary%><span class="wind-info"><%=wind%></span></span>
+<div class="clear"></div>
+<% 
+if (forecast.max > max) {
+  max = forecast.max;
+}
+if (forecast.min < min) {
+  min = forecast.min;
+}
+stars = stars + forecast.stars;
+}); %>
+</div>
+<div class="summary">
+Min <%=min%>, Max <%=max%>
+<div class="stars stars-<%=Math.round(stars/forecasts.length)%>"></div>
+</div>
+</div>
+</td>
+

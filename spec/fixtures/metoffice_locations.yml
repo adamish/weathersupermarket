@@ -1,0 +1,18 @@
+one:
+  id: 1
+  name: 'Leeds'
+  name_lower: 'leeds'
+  token: 'MET1'
+
+two:
+  id: 2
+  name: 'Manchester'
+  name_lower: 'manchester'
+  token: 'MET2'
+
+three:
+  id: 3
+  name: 'Huddersfield'
+  name_lower: 'huddersfield'
+  token: 'MET3'
+  

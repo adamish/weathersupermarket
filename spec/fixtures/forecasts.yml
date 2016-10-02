@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location_id: 1
+  temp_min: 25
+  temp_max: 30
+  summary: MyString
+  created_at: 2014-01-14T09:30:45Z
+  date: 2014-01-15T20:30:45Z
+two:
+  location_id: 1
+  temp_min: 20
+  temp_max: 27
+  summary: MyString
+  created_at: 2014-01-14T09:30:45Z
+  date: 2014-01-14T20:30:45Z

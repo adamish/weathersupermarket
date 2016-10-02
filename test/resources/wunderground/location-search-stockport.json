@@ -1,0 +1,25 @@
+jQuery17208999886005185544_1389477403791 ({ "RESULTS": [
+	{
+		"name": "Stockholm, Sweden", 
+		"type": "city", 
+		"c": "SE",
+		"zmw": "00000.1.02485",
+		"tz": "Europe/Stockholm",
+		"tzs": "CET",
+		"l": "/q/zmw:00000.1.02485",
+		"lat": "59.330002",
+		"lon": "18.049999"
+	},
+	{
+		"name": "Stockport, United Kingdom", 
+		"type": "city", 
+		"c": "GB",
+		"zmw": "00000.48.03334",
+		"tz": "Europe/London",
+		"tzs": "GMT",
+		"l": "/q/zmw:00000.48.03334",
+		"lat": "53.400002",
+		"lon": "-2.150000"
+	}
+]
+});

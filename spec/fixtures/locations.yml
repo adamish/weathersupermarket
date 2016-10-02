@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  name: 'Stockport'
+  token: 'SS1'
+  provider_id: 1
+
+two:
+  id: 2
+  name: 'Cheadle'
+  token: 'SS2'
+  provider_id: 1
+
+three:
+  id: 3
+  name: 'Bramhall'
+  token: 'SS3'
+  provider_id: 1

@@ -1,0 +1,21 @@
+
+<tr data-provider="<%=name%>">
+<%
+var translate = {};
+translate['bbc'] = 'BBC';
+translate['accuweather'] = 'AccuWeather';
+translate['metoffice'] = 'Met Office';
+translate['metcheck'] = 'MetCheck';
+translate['weatherunderground'] = 'WUnderground';
+translate['weatherchannel'] = 'Weather Channel';
+
+%>
+	<th class="location">
+		<div class="provider-wrap"><div class="provider provider-<%=name%>"></div><span><%=translate[name]%></span></div>
+		<div class="clear"></div>
+		<div class="detail"></div>
+		<div class="change"><button class="control change-location">Change location</button></div> 
+		<select></select>
+	</th>
+	<td></td>
+</tr>

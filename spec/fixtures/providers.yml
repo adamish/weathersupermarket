@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+   id: 1
+   name: 'bbc'
+
+two:
+   id: 2
+   name: 'accuweather'
+
+three:
+   id: 3
+   name: 'metoffice'
+   
+four:
+   id: 4
+   name: 'weatherunderground'
+   
+five:
+   id: 5
+   name: 'metcheck'
+   
+six:
+   id: 6
+   name: 'weatherchannel' 
+   
+     

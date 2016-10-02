@@ -1,0 +1,14 @@
+
+
+one:
+  quicklink_id: 1
+  location_id: 1
+
+two:
+  quicklink_id: 1
+  location_id: 2
+  
+three:
+  quicklink_id: 1
+  location_id: 3
+  

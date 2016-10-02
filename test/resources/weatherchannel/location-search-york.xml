@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This document is intended only for use by authorized licensees of The  -->
+<!-- Weather Channel. Unauthorized use is prohibited.  Copyright 1995-2013, -->
+<!-- The Weather Channel Interactive, Inc.  All Rights Reserved.            -->
+<search ver="3.0">
+  <loc id="USNY0996" type="1">New York, NY</loc>
+  <loc id="USNY0011" type="1">Albany, NY</loc>
+  <loc id="USNY0181" type="1">Buffalo, NY</loc>
+  <loc id="USNY1232" type="1">Rochester, NY</loc>
+  <loc id="USNY1434" type="1">Syracuse, NY</loc>
+  <loc id="USNY1010" type="1">Niagara Falls, NY</loc>
+  <loc id="SLXX0019" type="1">York, Sierra Leone</loc>
+  <loc id="UKXX0162" type="1">York, United Kingdom</loc>
+  <loc id="USNY1630" type="1">York, NY</loc>
+  <loc id="ASXX6216" type="1">York, Australia</loc>
+</search>
+

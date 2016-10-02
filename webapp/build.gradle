@@ -1,0 +1,62 @@
+
+task production << {
+	delete('production')
+    new File('production/img').mkdirs()
+    new File('production/js').mkdirs()
+    new File('production/app').mkdirs()
+    
+    new File('build').mkdirs()
+	def salt = "?v=" + new Date().getTime()
+	
+		
+	exec {
+		commandLine '/usr/bin/yui-compressor', 'main.css', '-o', 'production/main.min.css'
+	}
+	def css = new File('production/main.min.css').text
+	copy {
+	    from 'templates/'
+	    into 'production/'
+	    include 'index.html'
+	    expand(css: "<style>${css}</style>", 
+	    js: "<script async src=\"/js/main.min.js${salt}\"></script>") 
+	}
+	copy {
+	    from 'templates/'
+	    into '.'
+	    include 'index.html'
+	    expand(css: '<link rel="stylesheet" href="main.css" />', 
+	    js: '<script data-main="/js/main" src="/js/third-party/require-2.1.11.min.js"></script>') 
+	}
+
+	copy {
+	    from '.'
+	    into 'production/'
+	    include '*.html'
+	    exclude 'index.html'
+	}
+	copy {
+	    from '.htaccess'
+	    into 'production/'
+	}
+    copy {
+	    from 'img'
+	    into 'production/img'
+	}
+	copy {
+	    from 'app'
+	    into 'production/app'
+	}
+
+	exec {
+		commandLine 'bash', './optimize-images.sh'
+	}
+	
+}
+
+task js << {	
+
+	exec {
+		commandLine 'nodejs', 'r.js', '-o', 'build.js'
+	}
+}
+
